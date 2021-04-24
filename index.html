@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juhunu</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <v-app>
+            <v-main>
+                <v-container>
+
+                    <v-card class="mx-auto" max-width="344">
+                        <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px"></v-img>
+
+                        <v-card-title>
+                            I'm Juhunu
+                        </v-card-title>
+
+                        <v-card-subtitle>
+                            From Nalgonda, Telangana
+                        </v-card-subtitle>
+
+                        <v-card-actions>
+                            <v-btn color="orange lighten-2" text>
+                                Know more
+                            </v-btn>
+
+                            <v-spacer></v-spacer>
+
+                            <v-btn icon @click="show = !show">
+                                <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                            </v-btn>
+                        </v-card-actions>
+
+                        <v-expand-transition>
+                            <div v-show="show">
+                                <v-divider></v-divider>
+
+                                <v-card-text>
+                                    I'm a lazy girl trying to learn Web development. And going to school.
+                                </v-card-text>
+                            </div>
+                        </v-expand-transition>
+                    </v-card>
+
+                </v-container>
+            </v-main>
+        </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+        })
+    </script>
+</body>
+
+</html>
