@@ -17,7 +17,7 @@
     <div id="app">
         <v-app>
             <v-main>
-                <v-container>
+                <v-container style="height: 100vh; display: flex; align-items: center;">
 
                     <v-card class="mx-auto" max-width="344">
                         <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px"></v-img>
@@ -63,6 +63,9 @@
     <script>
         new Vue({
             el: '#app',
+            data: () => ({
+                show: false,
+            }),
             vuetify: new Vuetify(),
         })
     </script>
